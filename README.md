@@ -1,2 +1,2 @@
 # micropython-jenkins-ci
-CI scripts for my MicroPython test-rack
+Jenkins CI pipeline scripts for my MicroPython mimxrt test setup.
