@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Prepare') {
             options {
-                timeout(time: 5, unit: 'MINUTES')
+                timeout(time: 40, unit: 'MINUTES')
             }
             steps {
                 echo'Check test board availability ...'
@@ -20,9 +20,9 @@ pipeline {
 
                 echo'Setup repository ...'
                 git 'https://github.com/alphaFred/micropython.git'
-                sh 'git fetch --all --prune'
-                sh 'git reset --hard origin/mimxrt/sdcard_spi_mode'
-                sh 'git submodule update --init'
+                sh("git fetch --all --prune")
+                sh("git reset --hard ${BRANCH}")
+                sh("git submodule update --init")
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
            steps {
                dir('ports/mimxrt/') {
                    script {
-                    if(params.get("REBUILD_BINARIES") == true) {
+                    if(params.get("REBUILD") == true) {
                            board_list.each{ board ->
                                sh("make clean BOARD=${board['name']}")
                                sh("make all BOARD=${board['name']} -j4")
