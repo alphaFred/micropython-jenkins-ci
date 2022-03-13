@@ -80,7 +80,7 @@ pipeline {
                         dir('tools/') {
                             sh'''
                             TTY=$(ls -l /dev/serial/by-id | grep "A324F865D249154E" | grep -oP "tty\\w*\\d*")
-                            python3.9 pyboard.py -d /dev/${TTY} ../../../scripts/sdcardtests.py
+                            python3.9 pyboard.py -d /dev/${TTY} ${WORKSPACE}/pipeline_script/tests/sdcard_basic_function_test.py
                             '''
                         }
                     }
