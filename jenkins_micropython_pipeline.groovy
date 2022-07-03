@@ -1,9 +1,9 @@
 def board_list = [
 [name: "MIMXRT1020_EVK", device_name: "MIMXRT1021DAG5A", serial_num: "A324F865D249154E", start_addr: "0x60000000", debugger: false, debugger_serial: "260106308"],
-[name: "SEEED_ARCH_MIX", device_name: "MIMXRT1052DVL6B", serial_num: "997EE163D2A92656", start_addr: "0x60000000", debugger: false, debugger_serial: ""],
-[name: "TEENSY41"      , device_name: "MIMXRT1062DVJ6A", serial_num: "1CD0455DD7B1193F", start_addr: "0x60000000", debugger: false, debugger_serial: ""],
+//[name: "SEEED_ARCH_MIX", device_name: "MIMXRT1052DVL6B", serial_num: "997EE163D2A92656", start_addr: "0x60000000", debugger: false, debugger_serial: ""],
+//[name: "TEENSY41"      , device_name: "MIMXRT1062DVJ6A", serial_num: "1CD0455DD7B1193F", start_addr: "0x60000000", debugger: false, debugger_serial: ""],
 //[name: "MIMXRT1176_EVK", device_name: "MIMXRT1176DVMAA", serial_num: "4F2C8F820EC01237", start_addr: "0x60000000", debugger: false, debugger_serial: ""],
-[name: "MIMXRT1010_EVK", device_name: "MIMXRT1011DAE5A", serial_num: "A8100D7BD7092D15", start_addr: "0x60000400", debugger: false, debugger_serial: "801038175"]
+//[name: "MIMXRT1010_EVK", device_name: "MIMXRT1011DAE5A", serial_num: "A8100D7BD7092D15", start_addr: "0x60000400", debugger: false, debugger_serial: "801038175"]
 ]
 
 pipeline {
